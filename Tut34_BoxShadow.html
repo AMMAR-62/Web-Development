@@ -1,0 +1,77 @@
+<!-- @format -->
+<!-- 
+So far in these tutorials, we have discussed many projects and designing of the website through HTML and CSS. Now, we are going to learn about Box Shadow and Text Shadow. As usual, make a new file as tut34.html and then add the basic boilerplate. Give the title as Box Shadow and Text Shadow in the <title> tag.
+
+The box-shadow CSS property adds shadow effects around an element’s frame. We can set multiple effects separated by commas. It is described by X and Y offsets relative to the element, blur and spread radius, and colour. The text-shadow CSS property adds a shadow to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations. It is also described by some combination of X and Y offsets from the element, blur radius, and colour.
+
+We will start by writing our HTML code. Here will make three divs with the class as a card. So the code will be as follows-
+We will then add the margin, padding and background image to the class- .card as follows-
+If we write the above values in the negative, the shadow will move towards up. In the same way, we can apply the blur-radius property to the boxes. This property is used to make the border blur. The other property is spread-radius. It is used to spread the color around the box. To make all these changes inside the box, we can use the inset property as follows-
+
+box-shadow: inset 3px 5px green
+We can use the negative values here also to see the changes towards the upside. All the properties like blur-radius and spread-radius can also be used here.
+
+So, I believe you have understood the concepts of box and text shadows. You can try different effects and analyze the changes accordingly. Till then, stay connected with the tutorial.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Box Shadow Tutorials for CSS</title>
+		<style>
+			.container {
+				display: flex;
+				width: 80%;
+				margin: 5%;
+				box-sizing: border-box;
+			}
+			.card {
+				margin: 5px;
+				padding: 7px;
+				width: 30em;
+				background-color: burlywood;
+				/* box shadow - offset-x offset-y blur-radius spread-radius color */
+				box-shadow: 4px 4px 0.2px 1px rgba(184, 184, 184, 0.7);
+				/* rgba - red green blue alpha */
+			}
+			.card h3 {
+				text-shadow: 1px 1px 1px white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>This is Box Shadow and Text Shadow Tutorials for CSS</h1>
+		<div class="container">
+			<div class="card" id="card1">
+				<h3>This is C++ Course</h3>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+					obcaecati nam, pariatur soluta dolorem quos suscipit ducimus fugiat
+					voluptates dolorum, maiores quam alias ab, libero hic ullam quo
+					aliquam voluptatum ratione neque illum magni.
+				</p>
+			</div>
+			<div class="card" id="card2">
+				<h3>This is HTML Course</h3>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
+					consectetur sequi, quidem perspiciatis perferendis delectus
+					necessitatibus eum autem? Ut eos repellat facilis? Praesentium omnis
+					error, cum rerum mollitia consectetur porro ducimus quos voluptate ad?
+				</p>
+			</div>
+			<div class="card" id="card3">
+				<h3>This is Java Course</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+					eligendi magnam officiis maxime nihil, magni iusto recusandae eos
+					voluptatum facilis tempore cumque blanditiis adipisci laudantium
+					accusantium totam laborum deleniti vel corrupti repellendus debitis
+					aliquam.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

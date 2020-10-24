@@ -1,0 +1,55 @@
+<!-- @format -->
+<!--
+In this tutorial, we are going to learn about different types of transforms used in CSS. The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew., elements. This property is also used in creating animations.
+
+We will start by making a new file as tut38.html and create an instant boilerplate through emmet abbreviation to get the basic HTML template. Give the title as CSS Transform in the <title> tag. Then we will write our HTML code to get started as follows-
+
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>This is Transform Property in CSS</title>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+			.container {
+				height: 80vh;
+				width: 100vw;
+				background-color: burlywood;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 2vw;
+				background-color: brown;
+				border: 2px solid black;
+				border-radius: 8px;
+				height: 50%;
+				width: 10em;
+				transition: all 1s;
+			}
+			.box:hover {
+				transform: scale(2);
+
+			}
+		</style>
+	</head>
+	<body>
+		<h1>This is Transform Tutorials For CSS</h1>
+		<div class="container">
+			<div class="box" id="box1">Box1</div>
+			<div class="box" id="box2">Box2</div>
+			<div class="box" id="box3">Box3</div>
+			<div class="box" id="box4">Box4</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Navigation Tutorials for CSS</title>
+		<style>
+			body {
+				margin: 0px 20px;
+				padding: 0px;
+				float: top;
+				background-color: rgb(213, 212, 212);
+			}
+			.navbar {
+				background-color: black;
+				border-radius: 10px;
+			}
+			.navbar ul {
+				overflow: hidden;
+			}
+			.navbar li {
+				float: left;
+				list-style: none;
+				padding: 7px;
+			}
+			.navbar li a {
+				text-decoration: none;
+				color: white;
+				padding: 10px auto;
+				margin: auto;
+			}
+			.navbar li:hover {
+				background-color: orange;
+				border-radius: 10px;
+                color: brown;
+			}
+			.search {
+				color: white;
+				float: right;
+				margin: 2px 20px;
+			}
+			.search button {
+				background-color: black;
+				color: white;
+				padding: 4px 8px;
+				border-radius: 8px;
+			}
+			.search button:hover {
+				background-color: orange;
+				border: 2px solid white;
+				border-radius: 8px;
+			}
+			.search input {
+				border-radius: 10px;
+			}
+			.search input:focus href='#' {
+				background-color: rgb(235, 226, 226);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<div class="search">
+						<input
+							type="text"
+							name="Text"
+							id="Text"
+							placeholder="Search Here"
+						/>
+						<button type="submit" value="Search">Search</button>
+					</div>
+				</ul>
+			</nav>
+		</header>
+	</body>
+</html>

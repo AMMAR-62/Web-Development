@@ -1,0 +1,118 @@
+<!-- @format -->
+<!-- 
+In this tutorial, we are going to see about different types of alignments available in CSS. We will start by making a new file called tut21.html and add the boilerplate to get the basic HTML code. Give the title as Alignment in the <title> tag.
+
+The CSS float property specifies how an element should float. The CSS clear property specifies what elements can float beside the cleared element and on which side. The float property is used for positioning and formatting content, for example, let an image float left to the text in a container. The float property can have one of one of the following values-
+Left- The elements floats to the left of its container.
+Right- The elements floats to the right of its container.
+None- The element does not float (it will be displayed just where it occurs in the text). This is default.
+Inherit- The element inherits the float value of its parent.
+Let us imagine that we are making a grocery store website and accordingly sell the things.
+
+For the CSS section, we will make different IDs and classes to specify different properties to each item listed.
+The auto property of margin allows to automatically adjust the margin equally on the both the ends.
+To float the elements, right or left we can target them by their IDs. 
+Initially you set the width as 50%
+If we add some more texts to fruit and computer and remove the float: left option from stationary then we find that fruit and computer will float on the right side of the container and overlaps the stationary section
+To avoid this, we use the property known as clear. If we write clear: both, then both the other elements will not overlap the stationary section.
+For paragraphs, we have different alignments options like right, left, center, and justify. The right alignment will move the texts to the right, left alignment to the left side and so on.
+However, now we do not use the float and clear property much. Instead, we use the properties like flexboxes. But then too the concepts of float and clear should be known to you. In the upcoming tutorials, we will see more different layouts like navigation bars etc. Till then stay tuned with the tutorials.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Alignment Tutorial for CSS</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			.container {
+				width: 900px;
+				background-color: bisque;
+				border-top: 5px solid rgb(167, 49, 49);
+				margin: auto;
+				margin-top: 120px;
+			}
+			.Item {
+				border: 3px solid rgb(213, 108, 38);
+				margin: 12px 3px;
+				padding: 12px 3 px;
+				background-color: #dfcf92;
+			}
+			#Fruits {
+				float: left;
+				width: 48%;
+			}
+			#Computer {
+				float: right;
+				width: 48%;
+			}
+			#Stationary {
+				clear: both;
+				float: left;
+				width: 100%;
+			}
+			#Glasses {
+				clear: both;
+				float: left;
+				width: 100%;
+			}
+			p,
+			h3 {
+				text-align: left;
+				/* text-align: justify; */
+				margin: 10px 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="Fruits" class="Item">
+				<h3>Fruits</h3>
+				<p id="FruitsPara" class="Para">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+					deserunt quidem dicta architecto odio, voluptates, accusantium
+					cupiditate dolore voluptatem temporibus saepe laborum est eaque amet
+					libero, animi nostrum minima ipsum? Lorem ipsum dolor sit amet
+					consectetur adipisicing elit. Dolorum ut quibusdam corrupti. Alias
+					quibusdam quia odio esse animi. Qui culpa blanditiis aliquam facilis
+					fugit ipsum assumenda, maxime quaerat repudiandae dignissimos?
+				</p>
+			</div>
+			<div id="Computer" class="Item">
+				<h3>Computer</h3>
+				<p id="ComputerPara" class="Para">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+					deserunt quidem dicta architecto odio, voluptates, accusantium
+					cupiditate dolore voluptatem temporibus saepe laborum est eaque amet
+					libero, animi nostrum minima ipsum? Lorem ipsum dolor sit amet
+					consectetur, adipisicing elit. Tempora quisquam explicabo ipsam nam
+					pariatur sed, repellendus sit quasi beatae! Qui impedit maxime nisi
+					quo, maiores a hic modi neque voluptatibus!
+				</p>
+			</div>
+			<div id="Stationary" class="Item">
+				<h3>Stationary</h3>
+				<p id="StationaryPara" class="Para">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+					deserunt quidem dicta architecto odio, voluptates, accusantium
+					cupiditate dolore voluptatem temporibus saepe laborum est eaque amet
+					libero, animi nostrum minima ipsum?
+				</p>
+			</div>
+			<div id="Glasses" class="Item">
+				<h3>Stationary</h3>
+				<p id="GlassesPara" class="Para">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+					deserunt quidem dicta architecto odio, voluptates, accusantium
+					cupiditate dolore voluptatem temporibus saepe laborum est eaque amet
+					libero, animi nostrum minima ipsum?
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

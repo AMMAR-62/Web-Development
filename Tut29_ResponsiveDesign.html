@@ -1,0 +1,91 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+
+<!-- 
+In this tutorial, we will discuss the responsive design and CSS units.
+
+What Is Responsive Design?
+Have you ever noticed that websites nowadays adjust themselves according to the resolution of your device(Smartphone, tablet, or desktop computer)? Isn't it amazing that a website is automatically changing its height and width according to the size of the user's screen? This is possible because of the responsive design. Let's dive deep into responsive design.
+Responsive design is a way for a web developer to make a website adapt to all the devices and resolutions.
+Endless new resolutions and devices are challenging to support separately for a web developer; therefore, responsive design is the best approach to develop a website that can adjust itself according to the screen size.
+Responsive design is a necessity and not a luxury anymore!
+Various Ways To Achieve Responsive Design :
+By using rem/vh/vw units over pixels.
+By using max-width/max-height.
+Using CSS Media Queries.
+Setting up the viewport.
+This tutorial will cover the use of CSS size units to make a responsive website. We will see other ways of responsive design in further tutorials. So, let's start our discussion on CSS size units. Now, we will use these heading to understand the concept of em, rem,vh, and vw.
+em- 
+Font-sizes are inherited relative to the parent element.
+10em means ten times of the parent element.
+rem-
+Font-size gets set according to the font-size of the root element.
+In general, <html> is the root element.
+In rem, "r" stands for "root."
+vh- 
+It stands for viewport height.\
+vh is equal to the 1/100 times of the viewport height.
+Example: Suppose height of the browser is 1000px, so 1vh is equaled to (1/100)*1000= 10px.
+vw-
+It stands for viewport width.
+Similar to vh, vw is equal to the 1/100 times of the viewport width.
+Example: Suppose width of the browser is 1000px, so 1vw is equaled to (1/100)*1000= 10px.
+and I believe that's all are the concepts discussed in this tutorial are crystal clear to you.
+ -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive Designs with the Help of CSS</title>
+		<style>
+			.container {
+				font-size: 10px;
+				border: 2px solid red;
+				width: 800px;
+				/* height: 400px; */
+				height: 100vh;
+				width: 100vw;
+			}
+			html {
+				font-size: 25px;
+			}
+			h3 {
+				text-align: center;
+			}
+			#first {
+				/* padding: 3em; */
+			}
+			#Second {
+				/* font-size: 3rem; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h3 id="first">
+				This is the Tutorial for the Responsive Websites with the Help of CSS
+				(First)
+			</h3>
+			<h3 id="Second">
+				This is the Tutorial for the Responsive Websites with the Help of CSS
+				(Second)
+			</h3>
+			<h3 id="Third">
+				This is the Tutorial for the Responsive Websites with the Help of CSS
+				(Third)
+			</h3>
+			<!-- view Port, max width, max height -->
+			<!-- media queries -->
+			<!-- em,rem and other units -->
+			<!-- em - according to it ancestor -->
+			<!-- Use-case: When we want the oarent and child to be associated with respect to each other -->
+			<!-- rem - according the HTML font-size relatively -->
+			<!-- Use- case: When we want the default size to be relatable if the user edits his settings -->
+			<!-- FOr more:https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984#:~:text=rem%20and%20em%20units%20are%20computed%20into%20pixel,by%20font%20size%20inheritance%20from%20any%20parent%20element -->
+			<!-- View-Port Height: the orginal screen height (100vh) -->
+			<!-- View-Port Width: the original screen width (100vw) -->
+			<!-- Use-case: when you wanna relate with the screen size -->
+		</div>
+	</body>
+</html>

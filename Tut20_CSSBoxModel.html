@@ -1,0 +1,96 @@
+<!-- @format -->
+<!-- In this tutorial, we are going to study the concept of the box model in CSS. The box model is a very important topic of CSS and if not understood properly, it can create a lot of confusion in the future. It is the basic framework of web development whether you are making a website using any other language such as Angular or React. The box model helps us to define the padding, border, and margin around an element. So from the above diagram we can see where all these things lie around the element. The element is in the center surrounded by padding, border and margin.
+These parts can be explained as-
+Content- The content of the box, where text and images appear.
+Padding- It clears an area around the content. The padding is transparent.
+Border- A border is one that covers the padding and content.
+Margin- It clears an area outside the border. The margin is also transparent.
+
+There is padding or margin shorthand for all directions. The first value is for top, 2nd value is for the bottom, 3rd value is for left and 4th value is for right.
+padding: 23px 56px 6px 78px;  
+margin: 23px 56px 6px 78px;   
+There is another technique for using the shorthand technique if you want to give the same values for left/right and top/bottom. The first value is the same for both the top and bottom and the second value is the same for both left and right. The two values can be represented as x and y values.
+padding: 23px 56px;
+Border radius is used to apply an arc type shape in each corner of the border and its code is written as below:
+Let us now understand a property called ‘Box sizing’. On giving width to the element and after that applying padding in the container, the width also changes. It is because in the actual width of an element, margin is already been added into it. If you want this not to happen then you can use the property of ‘box-sizing’.
+box-sizing: border-box;
+Now if you change the padding then it will adjust the width according to the padding.
+We can take the help of universal selector in the CSS to apply the property of box-sizing in all the elements available. It is denoted with a ‘*’.
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+So I believe the concept of CSS Box Model and Box Sizing is understood to you. To understand more deeply, you can try to change the values and see all the necessary changes.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Box and Model</title>
+		<style>
+			.container {
+				background-color: bisque;
+                border: 3px solid blue;
+                /* We can set margin  padding for left, bottom, top and right */
+                /* padding: 9px; */
+
+                margin: 10px;
+                padding : 23px 56px 6px 78px
+                /* padding y(top bottom) */
+            }
+            </style>
+	</head>
+	<body>
+		<div class="container">
+			<h3></h3>
+			<p id="first">
+				<summary>first para</summary>
+				<details>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					molestiae repellendus eligendi minima a odit nam. Consectetur fugiat
+					dicta, saepe nam sequi deserunt
+				</details>
+				.
+			</p>
+		</div>
+		<div class="container">
+			<h3></h3>
+			<p id="second">
+				<summary>second para</summary>
+				<details>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					molestiae repellendus eligendi minima a odit nam. Consectetur fugiat
+					dicta, saepe nam sequi deserunt.
+				</details>
+			</p>
+		</div>
+		<div class="container">
+			<h3></h3>
+			<p id="third">
+				<summary>third para</summary>
+				<details>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					molestiae repellendus eligendi minima a odit nam. Consectetur fugiat
+					dicta, saepe nam sequi deserunt.
+				</details>
+			</p>
+		</div>
+		<div class="container">
+			<h3>fourth para</h3>
+			<p id="fourth">
+				<summary>
+					fourth
+					<param name="" value="" />
+				</summary>
+				<details>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+					molestiae repellendus eligendi minima a odit nam. Consectetur fugiat
+					dicta, saepe nam sequi deserunt.
+				</details>
+			</p>
+		</div>
+	</body>
+</html>

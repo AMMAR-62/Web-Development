@@ -1,0 +1,49 @@
+<!-- @format -->
+<!-- 
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. 
+CSS grids are the display properties that allow us to transform any box into the grid. The main difference between flexbox and grid is, in flexbox, we can either move the box in horizontal or vertical directions but in the grid system, we can make the two-dimensional grid systems.
+We have to initialize the grid and make all its components act in two-dimensional layout.
+.container{
+        display: grid;
+}
+By writing the above code, we mean to say that all the things inside the container will now behave like a grid. The grid system should not be considered same as table because table is just a normal combination of rows and columns whereas grid is a full layout system.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Grid Tutorials</title>
+		<style>
+			.container {
+				display: grid;
+				grid-template-columns: 25vw 25vw 30vw;
+				grid-auto-rows: 3fr;
+				/* fr is the fraction of the page height or width */
+				grid-template-columns: repeat(3fr);
+				/* it divides the page into 3 columns of equal width */
+				/* auto-rows specifies the height of the unspecified rows */
+				/* we can make different layout for websites */
+			}
+			.item {
+				background-color: aqua;
+				margin: 5px;
+				width: 20vw;
+				height: 20vh;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">this is item-1</div>
+			<div class="item">this is item-2</div>
+			<div class="item">this is item-3</div>
+			<div class="item">this is item-4</div>
+			<div class="item">this is item-5</div>
+			<div class="item">this is item-6</div>
+			<div class="item">this is item-7</div>
+			<div class="item">this is item-8</div>
+			<div class="item">this is item-9</div>
+		</div>
+	</body>
+</html>

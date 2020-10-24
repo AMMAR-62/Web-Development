@@ -1,0 +1,113 @@
+<!-- @format -->
+<!-- For thepry view
+https://www.w3schools.com/css/css3_flexbox.asp
+/* Initialize the container as a flex box */
+            
+            /* Flex properties for a flex container */
+
+            /* flex-direction: row; (Default value of flex-direction is row) */
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            
+
+            /* flex-wrap: wrap; (Default value of flex-direction is no-wrap) */
+            /* flex-wrap: wrap-reverse; */
+
+            /* This is a shorthand for flex-direction: and flex-wrap: ;; */
+            /* flex-flow: row-reverse wrap; */ 
+
+            /* justify-content will justify the content in horizontal direction */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+
+            /* justify-content will justify the content in vertical direction */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* align-items: stretch; */ 
+  /* Flex properties for a flex item */
+            /* Higher the order, later it shows up in the container */
+            /* order: 2; */
+
+			/* flex-grow: 2;
+			flex-shrink: 2; */
+			/* flex-grow: 3;
+            flex-shrink: 3 ; */
+            flex-basis: 160px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FlexBox For CSS</title>
+		<style>
+			.container {
+				height: 544px;
+				width: 100%;
+				border: 2px solid black;
+				display: flex;
+				/* Flex Properties */
+				/* /* flex-flow: wrap row; */
+				/* justify-content: center;  */
+				/* Aligns flex items along the main axis of the current line of the flex container. */
+				/* justify-content: space-between; */
+				/* Aligns flex items along the main axis of the current line of the flex container.*/
+				/* justify-content: space-evenly; */
+				/* Aligns flex items along the main axis of the current line of the flex container. */
+				/* justify-content: space-around; */
+				/* Aligns flex items along the cross axis of the current line of the flex container. */
+				/* align-items: center; */
+				/* Aligns flex items along the cross axis of the current line of the flex container. */
+				/* align-items: flex-end; */
+				/* Aligns flex items along the cross axis of the current line of the flex container. */
+				/* align-items: flex-start; */
+				/* Aligns flex items along the cross axis of the current line of the flex container. */
+				/* align-items: stretch; */
+			}
+			.item {
+				width: 200px;
+				height: 200px;
+				background-color: tomato;
+				border: 2px solid green;
+				margin: 10px;
+				padding: 3px;
+
+				/* Flex properties for a flex item */
+			}
+			#item1 {
+				/* Sets the flex grow factor. Negative numbers are invalid. */
+				/* flex-grow: 2; */
+				/* when flex direction is set to row the dlex-basis will control the width */
+				/* when flex direction is set to column the dlex-basis will control the height */
+				flex-basis: 80px;
+			}
+			#item2 {
+				/* Higher the order later it shows up in the container */
+				flex-grow: 3;
+			}
+			#item3 {
+				/* Sets the flex shrink factor. Negative numbers are invalid. */
+				/* flex-shrink: 2; */
+				/* Controls the order in which children of a flex container appear within the flex container, by assigning them to ordinal groups. */
+				/* order: 40; */
+				/* shorthand for flex */
+				flex: 2 2 160px;
+				align-self: flex-end;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>This is FlexBox Tutorial</h1>
+		<div class="container">
+			<div class="item" id="item1">First Box</div>
+			<div class="item" id="item2">Second Box</div>
+			<div class="item" id="item3">Third Box</div>
+		</div>
+	</body>
+</html>

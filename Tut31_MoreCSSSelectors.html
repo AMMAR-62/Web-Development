@@ -1,0 +1,85 @@
+<!-- @format -->
+<!-- 
+In one of our previous videos, we have already covered the basics of CSS selectors. In this tutorial, we will discuss some advanced concepts about CSS selectors.
+First of all, we have used the CSS given below to design some divs and paragraph tags.
+Now, let's suppose you want to add styling to all the paragraphs inside the div. What will you do? You can use the following CSS :
+div p{
+            color: rgb(0, 0, 128);
+            background-color:orange;
+            font-weight: bold;
+        }
+In the above image, you can see that the CSS is applied to the two paragraphs, but it is not applied to the third paragraph. Why? Let me answer this simple question for you. The CSS is not applied to the third paragraph because we have applied CSS only on the <p> tags inside div, and the third paragraph is not inside a div element.
+This was very simple. Now let's move on to the next situation. What will you do if you want to target the <p> tags, which are the direct child of the div? So, whenever we want to target a direct child element, we use the following syntax :
+element> element; 
+Example :
+div>p
+In the above example, the styling will be applied to all <p> elements which are the direct child of any div element. Let's understand this with the help of paragraph tags that we created at the starting of this tutorial.
+In the above image, you can see that the CSS is applied to the second and third paragraphs because they are the direct child of div. Paragraph inside <li> is the direct child of <li> and not of <div>. Also, in the case of the outermost paragraph, the parent element is the body and not div; therefore, no styling is applied to it. Now, we will talk about one more type of CSS selectors, i.e., div+p.
+div+p :
+There might be situations where you want to select the <p> tags that are immediately after the <div> elements. In such cases, we use the div+p selectors. Let's understand this with the help of example given below:
+In the above image, you can see that the CSS is applied only to the third and outermost paragraphs because they are next to the <div> element.
+This is all for this tutorial, and in the next tutorial, we will discuss the nth-child pseudo selectors. See you in the next tutorial!
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>More On CSS Selectors</title>
+		<style>
+			/* if p is contained by any li which is contained by div */
+			/* div li p{
+        color: yellow;
+        background-color: green;
+        font-weight: bold;
+        } */
+
+			/* if p is right inside div then this CSS will be applied */
+			/* div > p{
+        color: yellow;
+        background-color: green;
+        font-weight: bold;
+        } */
+
+			/* if p is right after div i.e p is the next sibling of div*/
+			/* div + p{
+        color: white;
+        background-color: rgb(238, 137, 137);
+        } */
+
+			h3 {
+				background-color: red;
+				color: black;
+				font-weight: bold;
+				text-align: center;
+			}
+			div > p {
+				color: yellow;
+				font-weight: bold;
+				background-color: gray;
+			}
+			div + p {
+				color: white;
+				background-color: rgb(233, 162, 162);
+			}
+		</style>
+	</head>
+	<body>
+		<h3>This is More on CSS Selectors</h3>
+		<div class="container">
+			<div class="row">
+				<ul>
+					<li class="item">
+						<p>This is another paragraph inside the the Li tag</p>
+					</li>
+					<li>This will not get affected</li>
+					<p>This is another paragraph inside the Ul tag</p>
+				</ul>
+				<p>This is a paragraph</p>
+			</div>
+			<p>This is another Paragraph</p>
+		</div>
+		<p>This is The Third Paragraph</p>
+	</body>
+</html>

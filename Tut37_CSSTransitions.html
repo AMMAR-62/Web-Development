@@ -1,0 +1,64 @@
+<!-- @format -->
+<!-- 
+In the last tutorial, we have learned about keyframes and animations to design the animation. Here we are going to learn what are transitions and how to create them. CSS transitions allow us to change property values smoothly, over a given duration. It provides a way to control animation speed when changing CSS properties.
+Make a new file as tut37.html and add the boilerplate to get the basic HTML code. Give the title as CSS Transitions in the <title> tag. Let us now add some HTML code in the <body> tag to get started.
+Let us now discuss some of the transition properties-
+Transition-property- It is used to decide which transition property we want to use. For example, if we want to transition background color
+transition-property: background-color;
+Transition-duration- If we want to see the duration which is required to make the change, we can use this property. For example, if we set transition duration as 1seconds, then the transition will happen in 1 second only.
+Transition-timing-function- This property is used to decide the speed of transition from beginning to end. These are of three types as follows-
+ease-in
+After applying this, the animation will start slowly and becomes fast towards the end.
+ease-out
+After applying this, the animation will begin fastly and become slow towards the end.
+ease-in-out
+After applying this, the animation will start slowly, then become fast in the midway, and ends slowly.
+transition-timing-function: ease-in-out;
+Transition-delay- It is that particular time interval after which the transition effect will start. For example, if we set it as 2s, then the transition effect will start after 2 seconds only.
+transition-delay: 2s;
+Also, there is one short hand property that allows us to write all these transitions in a single line. It can be written as follows-
+transition: background-color 1s ease-in-out 2s;
+If we want all the properties should go under transition, then we can write-
+transition: all 1s ease-in-out 2s;
+Here, all the properties will get changed accordingly and you witness some good transitions. All those properties that can change their values like colors, can show different transition properties. You can try different such properties and view the effects of these transitions. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Transition</title>
+		<style>
+			.box {
+				display: flex;
+				height: 200px;
+				width: 200px;
+				justify-content: center;
+				align-items: center;
+				background-color: rebeccapurple;
+				/* transition-property: background-color, color;
+				transition-duration: 1s;
+				transition-timing-function: ease-in-out; */
+				/* This is the Transition shorthand property in one-line */
+				/* transition: background-color 1s ease-in-out; */
+				transition: all 2s ease-in-out;
+			}
+
+			.box:hover {
+				background-color: black;
+				color: white;
+				width: 50vh;
+				height: 50vw;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>This is CSS Transitions Tutorials</h1>
+		<div class="container">
+			<div class="box">
+				<p>This is my Box</p>
+			</div>
+		</div>
+	</body>
+</html>

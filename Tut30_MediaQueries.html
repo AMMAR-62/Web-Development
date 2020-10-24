@@ -1,0 +1,70 @@
+<!-- @format -->
+<!-- 
+In this tutorial, we will discuss media queries in CSS.
+What Is Media Query?
+Media queries are used when we want to customize our website's presentation according to the user's screen size. With the help of media queries, you can display different markups based upon the device's general type(mobile, desktop, tablet).
+A media query is a logical operation. Whenever a media query becomes true, then the related CSS is applied to the target element.
+Syntax Of Media Query :
+A media query is composed of two things: media type and expression. A media query can contain one or more expressions. 
+Let's understand this example :
+@media: A media query always starts with @media.
+Screen: It is the applicable media type.
+max-width: It is the media feature. 
+#contents{width:90%} : It is the CSS to be applied when theconditions are met.
+Now, we will spend some time understanding how to use media queries on a website.
+First of all, we have used the below CSS to design four divs.
+Now, we are changing the display value to display:none; and then we will apply the media queries. Here is the CSS :
+Now, it's time to apply our very first media query. Here is the CSS used :
+In the above code, we have applied the media query to id=box1. So, whenever the page's width is 400px or more than 400px, then the display value of the box1 will be changed from display:none; to display:block; and applied CSS will be visible to the user.
+In the above image, I have used the chrome developer tools to change the page's width. You can see that the media query is applied when the page's width is set to 400px. So whenever the page width is 400px or more than 400px, then the media query for the box1 will be applied because we have set the minimum width to 400px. Similarly, we have applied a media query for the box2. Here is the CSS used:
+In the above code, we have set minimum width to 450px and maximum width to 600px. So the media query for the box2 will be applied whenever the screen's width is between 450px and 600px.
+So, that's how you can easily include different media queries depending upon your requirements. Note that we have used and operator to combine two queries to be true. You can also use other operators such as not, only, and comma(,). So, this is all for this tutorial, and I hope you have got the basic knowledge of media queries in CSS. Feel free to ask your queries in the QnA section.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Media Queries</title>
+		<style>
+			.box {
+				background-color: red;
+				color: white;
+				font-size: 22px;
+				text-align: center;
+				color: white;
+				display: none;
+			}
+			@media (max-width: 300px) and (min-width: 0px) {
+				#bocx1 {
+					display: block;
+					background-color: red;
+				}
+			}
+			@media (max-width: 500px) and (min-width: 300px) {
+				#bocx2 {
+					display: block;
+					background-color: blue;
+				}
+			}
+			@media (max-width: 800px) and (min-width: 500px) {
+				#bocx3 {
+					display: block;
+					background-color: greenyellow;
+				}
+			}
+			@media (min-width: 800px) {
+				#bocx4 {
+					display: block;
+					background-color: coral;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" id="bocx1">Mai ek IPhone Hu</div>
+		<div class="box" id="bocx2">Mai ek Tablet Hu</div>
+		<div class="box" id="bocx3">Mai ek Computer Hu</div>
+		<div class="box" id="bocx4">Mai ek Wide Computer Hu</div>
+	</body>
+</html>

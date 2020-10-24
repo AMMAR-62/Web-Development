@@ -1,0 +1,124 @@
+<!-- @format -->
+<!-- 
+In this tutorial, we are going to learn about how to create different animations with the help of CSS. Creating animations with CSS is the most exciting part of the whole web development. We will make a new file as tut36.html and add a boilerplate for the basic HTML template. Then give the title as Keyframes and Animations in the <title> tag.
+
+You will definitely appreciate the techniques shared in this tutorial about animations.
+The position of the box is set to be relative so that we can move it within our webpage.
+For making our animation, we need to start by giving the animation-name. We can give any name here. It is just used to define our animation.
+@keyframes harry1 {
+        from {
+            width: 200px;
+        }
+
+        to {
+            width: 1400px;
+        }
+    }
+In the above example, we are using the animation-name as harry1. The next property used is animation-duration. It is used to decide how long our animation will run. The last property is animation-iteration-count. It is used to decide the number of times the animation will run.
+Now we will define the animation we made, i.e. harry1 as follows-
+The keyframes are used to make the animation. From and to are used to decide how the animation will move in the webpage. In the above example, we are moving the animation harry1 from 200px to 1400px. These types of animations are used to design scroll bars or progress bars on the webpage.
+There are some other properties also to customize the animations like-
+animation-fill-mode:
+If we want to keep the last property applied to the animation then we can set the animation-fill-property as forward as follows-
+animation-fill-mode: forward;
+animation-timing-function:
+We can define this property with three different values-
+ease-in
+After applying this, the animation will start slowly and becomes fast towards the end.
+ease-out
+After applying this, the animation will begin fastly and become slow towards the end.
+ease-in-out
+After applying this, the animation will start slowly, then become fast in the midway, and ends slowly.
+animation-delay
+It is used to define the time after which the animation will start.
+animation-direction:
+This property is used to define the direction of the animation. For example, if we select it as reverse, it will move the animation in reverse direction.
+There is another method of creating animation apart from keyframes. For this, we will give the name as harry2.
+ @keyframes harry2 {
+        0%{
+            top:0px;
+            left:0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        75%{
+            top: 250px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 250px;
+        }
+        
+    } 
+In this way, we can create the animations in terms of different percentages. We can assign different values here that will occur when that percentage of animation will be completed.
+Keep practicing these animations and in the upcoming tutorials, you will learn about practical implementations of these animations.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animations and KeyFrames in CSS</title>
+		<style>
+			.container {
+				background-color: yellow;
+			}
+			.box {
+				background-color: green;
+				width: 25%;
+				height: 25%;
+				padding: 10px;
+				margin: 10px 10px;
+				position: relative;
+				animation: Ammar1 2s ease-in-out 1 forwards;
+				/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+			}
+			@keyframes Ammar {
+				from {
+					width: 25%;
+				}
+				to {
+					width: 80%;
+				}
+			}
+			@keyframes Ammar1 {
+				0% {
+					top: 0px;
+					left: 0px;
+				}
+				25% {
+					top: 250px;
+					left: 0px;
+				}
+				50% {
+					top: 250px;
+					left: 250px;
+				}
+				75% {
+					top: 0px;
+					left: 250px;
+				}
+				100% {
+					top: 0px;
+					left: 0px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>This is Animations and KeyFrames in CSS Tutorials</h1>
+		<div class="container">
+			<div class="box">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit itaque
+				vitae nihil optio corrupti aspernatur recusandae quod soluta deserunt
+				adipisci voluptate dolore, quibusdam sunt dolores laborum nesciunt cum
+				cupiditate modi officiis vel? Iste dolores similique animi explicabo,
+				magni dolorum dolor.
+			</div>
+		</div>
+	</body>
+</html>
