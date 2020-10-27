@@ -1,0 +1,40 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Interaction - Alert, confirm and Prompt</title>
+	</head>
+	<body>
+		<h1>This is the tutorial for alert, confirm and prompt in JavaScript</h1>
+	</body>
+	<script>
+		// Alert in in-browser JS - Does not return anything
+		// let a = alert('This is a message');
+		// console.log(a);
+		// Return value is undefined
+		// This opens a modal window
+
+		// Prompt
+		// let name = prompt('What is your name');
+		// console.log(name);
+		// This can be used to take an input
+
+		// Confirm
+		// Confirm is used to send a warning to the user
+		let deletePost = confirm('Do you wanna delete this post?');
+		console.log(deletePost);
+		// Sends an Ok,Cancel modal window
+		if (deletePost) {
+			// Code to delete the Post
+			alert('The Post has been deleted Successfully');
+		} else if (deletePost == undefined) {
+			// Code to cancel deletion of the post
+			alert("Post can't be deleted try again");
+		}
+	</script>
+</html>
+
+<!-- Quick quiz : Create a prompt and ask the users age if he's older than 18 then allow him else reject him -->

@@ -1,0 +1,92 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Js Tutorial for scope and conditionals</title>
+	</head>
+	<body>
+		<h1>
+			This is the Tutorial for if-else conditionals and switch case in
+			JavaScript
+		</h1>
+		<div>
+			<ul>
+				<li>item-1</li>
+				<li>item-2</li>
+				<li>item-3</li>
+				<li>item-4</li>
+				<li>item-5</li>
+				<li>item-6</li>
+				<li>item-7</li>
+			</ul>
+		</div>
+		<script>
+			// ofc we can write the String as
+			var string1 = 'THis is a String1';
+			// and we can modify the string as
+			var string1 = 'This is a String2';
+			// if we write a variable in function it is local
+			// if we write "var" then the variable is global if and only if
+			// it is mentioned outside a functions
+			// if we write "let" the variable becomes the local variable/ or it is
+			// on a block level
+			// This will print the string in the console
+			console.log(string1);
+
+			// For example
+			let a = 'u';
+			{
+				let a = 'u6';
+				console.log(a);
+			}
+			console.log(a);
+			// This is very helpful in object oriented programming
+			// Hence "let" must be used more often than "var"
+
+			// The "const" keyword can be used to declare a constant
+			// It places restriction on changing the value of that constant
+			// It's used when there is a need to declare a variable which shouldn't change
+			// in the program flow
+			const b = "This can't be changed";
+			console.log(b);
+
+			// Now we move towards the conditionals
+			let age = '2';
+			if (age > 18) {
+				console.log('You can drink water');
+			} else if (age == 2) {
+				console.log("Drink mother's milk");
+			} else {
+				console.log('You can drink cold-drink');
+			}
+			// We can use if else conditionals in form validation
+			//  as well as regular expressions
+
+			// Switch case can also be used
+			const cups = 45;
+			switch (cups) {
+				case 4:
+					console.log('The value of the cups is 4');
+					break;
+				case 41:
+					console.log('The value of the cups is 41');
+					break;
+				case 42:
+					console.log('The value of the cups is 42');
+					break;
+				case 43:
+					console.log('The value of the cups is 43');
+					break;
+				default:
+					console.log('The value of the cups is Default');
+					break;
+			}
+			// The values can also be String
+
+			// That's all in this Tutorial
+		</script>
+	</body>
+</html>

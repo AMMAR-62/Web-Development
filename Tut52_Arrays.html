@@ -1,0 +1,73 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arrays & Objects in JS</title>
+	</head>
+	<body>
+		<h1>This is a tutorial for Array and Objects in JS</h1>
+		<div class="container">simple si HTML</div>
+		<!--  -->
+		<script>
+			let MyVar = '34';
+			// Variables are basically containers
+			// In JS there are Two type
+			// Primitives and Reference
+			// in short they are objects or Primitives
+			// Primitive are
+			let str = 'String';
+			let nullity = null;
+			let bool = true;
+			let NotDef = undefined;
+			// We can also write JS in Console
+			// By default a variable is set to undefined until it's defined
+			// Objects store the Key-Value pair
+			let employee = {
+				name: 'Ammar',
+				salary: '10 rupai',
+				channel: 'CrazyForPointers',
+			};
+			// We use object to store Key-value pairs
+			// We can make arrays which is a special type of Objects
+			// Suppose  we want to create an array of names
+			let name = [1, 2, 5, 4, 1, 'Harry', undefined];
+			console.log(employee);
+			console.log(name);
+			// this will show that it's an array but also an object
+			console.log(name[1]);
+
+			// DOM
+			// means the HTML of the Page
+			// is returned the form of Arrays
+			// we can also create an array by using the keyword as "new"
+			let name1 = new Array(1, 2, 5, 4, 1, 'Harry', undefined);
+			console.log(name1);
+
+			// if we want the length of an array
+			// we can use the length attribute
+			console.log(name1.length);
+			// If we want to sort an array
+
+			names = name1.sort();
+			console.log(names);
+
+			// Adding an element to the end of the array
+			names.push('This is pushed');
+			console.log(names);
+
+			//How can we access the values of specific keys in an object
+			console.log(employee.channel);
+			console.log(employee['channel']);
+
+			// this means the array of 23 elements which are undefined
+			let newArr = new Array(23);
+			// but this means the array containing the element 23 and 32
+			let newArr1 = new Array(23, 32);
+
+			// This is it for this tutorial
+		</script>
+	</body>
+</html>

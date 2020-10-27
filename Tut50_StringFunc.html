@@ -1,0 +1,78 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>String Functions in JavaScript</title>
+	</head>
+	<body>
+		<p>This is String Functions in JavaScript</p>
+
+		<script>
+			str = 'This is a String';
+			console.log(str);
+			// what are the String functions in Java
+			// For slicing and other operations
+			position = str.indexOf('is');
+			// Returns the index of appeareance of first substring
+			console.log(position);
+			position = str.lastIndexOf('is');
+			// Returns the index of appeareance of first substring in
+			// the reverse order
+			console.log(position);
+
+			// Sometimes we want substring from a string
+			// Takes the starting and ending index of what you want
+			substr = str.slice(1, 5);
+			console.log(substr);
+
+			//Slicing can be done with  the help of other methods as well
+			substr = str.substring(1, 5);
+			// We can't use negative index in the substring functions
+			// but we can use them in the slice function
+			console.log(substr);
+
+			// where to start from and no of char in the string
+			substr1 = str.substr(1, 5);
+			console.log(substr1);
+
+			// if we want to replace a part of a string
+			replaced = str.replace('String', 'Ammar');
+			console.log(str);
+			console.log(replaced);
+
+			// upper and lower case conversion
+			console.log(str.toUpperCase());
+			console.log(str.toLowerCase());
+
+			// To join two strings we can use concat as well as +
+			newString = str.concat(' New String');
+			console.log(newString);
+			// But + is better than concat
+
+			// To remove white- spaces we trim function
+			// This removes the white spaces from the start and end of the String
+			var StrWithWhiteSpace = '             This is a string with white space';
+			console.log(StrWithWhiteSpace.trim());
+			//This is used in the express module
+
+			// How to extract chars from the String
+			char3 = str.charAt(3);
+			console.log(char3);
+
+			// We can also use the char code function to print the char code of that char
+			char3 = str.charCodeAt(3);
+			console.log(char3);
+			// But it's not very important as a beginner
+
+			// We can also use slicing as follows
+			console.log(str[2]);
+
+            // That's all in this tutorial
+            // We will also make a website in the future 
+            
+		</script>
+	</body>
+</html>
