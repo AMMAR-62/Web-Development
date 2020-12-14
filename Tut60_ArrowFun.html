@@ -1,0 +1,50 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arrow Functions in JavaScript</title>
+		<style></style>
+	</head>
+	<body>
+		<div class="container">
+			This is arrow function tutorial
+			<!-- It is basically a shortcut -->
+		</div>
+	</body>
+	<script>
+		// function greet(name){
+		//     console.log("Good morning ", name)
+		// }
+		// This can be written as
+		// let greet = name =>console.log("Good morning ", name)
+		// greet("Ammar")
+		// This can be written as
+		let greet = name => {
+			console.log('Good Morning', name);
+		};
+		greet('Ammar');
+
+		// Where are these used
+		// we used the setTimeout in those we can use these arrow function
+		// let sum = (a, b) => {
+		// 	return a + b;
+		// };
+		// This can be made into a shortcut like this
+		let sum = (a, b) => a + b;
+		// THis is similar to a lamda function
+		console.log(sum(4, 5));
+		let obj1 = {
+			names: ['Harry', 'Robin', 'Sam'],
+			speak() {
+				this.names.forEach(student => {
+					console.log('kukdoo koo', student);
+				});
+			},
+		};
+		obj1.speak();
+		// Arrow function takes the "this" of it's parent also called as "LEXICAL THIS"
+	</script>
+</html>

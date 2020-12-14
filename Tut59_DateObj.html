@@ -1,0 +1,45 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Date Object in JavaScript</title>
+		<style></style>
+	</head>
+	<body>
+		<div class="container">This is a container</div>
+		<h1>Current time is <span id="time"></span></h1>
+	</body>
+
+	<script>
+		console.log('this  is date and time tutorial');
+		// let now = new Date();
+		// Date is an Object in JS
+		// console.log(now);
+		// let dt = new Date();
+		// console.log(dt);
+		let newDate = new Date();
+		// let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds)
+		// let newDate = new Date(2020, 11, 16);
+		console.log(newDate);
+		// Target is to become a better web Developer
+		let yr = newDate.getFullYear();
+		console.log('The year is', yr);
+		// This prints the year
+		// In this way we can also use getDate() and getMonth()
+		// IF you want the time format to UTC
+		// Co-ordinated universal time
+		newDate.setDate(15);
+		console.log(newDate);
+		// This method uses auto-correction
+		// We can use Date.now() to print the timeStamp
+		// We can also use the SetDate(), setMonth(), setSeconds(), etc.
+		// We can use this to print a clock in the website
+		setInterval(UpdateTime, 1000);
+		function UpdateTime() {
+			time.innerHTML = new Date();
+		}
+	</script>
+</html>
