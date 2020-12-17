@@ -1,0 +1,4 @@
+We will see about 
+Postman - it is an app which helps in making post request and get request through a URL and custom headers which is recorded in this app in this way we can forget the extra work in JS like using a fetch API
+The Dog API - fetches the images of dogs
+We also use the JSon Placeholder API 
